@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palette & Studio Preview 🎨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>Color Studio Live ✨</h1>
+      <p>Selecciona una paleta para personalizar la vista previa al instante</p>
+    </header>
+
+    <main class="main-content">
+      <!-- Panel de Paletas -->
+      <section class="palette-selector">
+        <h2>Paletas Destacadas</h2>
+        <div class="palette-list" id="paletteList"></div>
+      </section>
+
+      <!-- Vista Previa de la Tarjeta -->
+      <section class="preview-section">
+        <div class="card-preview" id="cardPreview">
+          <span class="badge" id="cardBadge">UI Design</span>
+          <h3 id="cardTitle">Tarjeta de Prueba</h3>
+          <p id="cardText">Mira cómo los colores transforman completamente la personalidad de esta interfaz en tiempo real.</p>
+          <div class="card-action">
+            <button class="btn-primary" id="btnPrimary">Copiar Hex</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

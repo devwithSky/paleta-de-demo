@@ -1,0 +1,149 @@
+:root {
+  --bg-color: #f4f6f9;
+  --text-main: #1f2937;
+  --card-bg: #ffffff;
+  --accent: #ec4899;
+  --accent-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.palette-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 4px 10px 4px 4px;
+}
+
+.palette-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.palette-card:hover {
+  border-color: #6366f1;
+}
+
+.palette-card.selected {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent),
+    0 0 14px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+.palette-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.palette-list::-webkit-scrollbar-track {
+  background: #eef2f7;
+  border-radius: 8px;
+}
+
+.palette-list::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 8px;
+}
+
+.swatches {
+  display: flex;
+  gap: 6px;
+}
+
+.swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.card-preview {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.badge {
+  background-color: var(--accent);
+  color: var(--accent-text);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--accent-text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary:active {
+  transform: scale(0.96);
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
